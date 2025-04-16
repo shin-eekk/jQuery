@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2번째</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script>
+        // $(document).ready(function(){});
+        // $("button").click(function(){});
+        // $("logo").click(function(){});
+        // $("a").click(function(e){
+        //     e.preventDefault();
+        // });
+        // $("a").attr("href","#none");  //속성 메서드
+        // $("img").attr("src","1.jpg"); //모든 이미지 src값을 1.jpg
+        // $(".noimg").attr("src","/img/logo.png"); 
+
+        // //CSS//
+        // $(".logo").hover(function(){
+        //     $(this).attr("src", "kr.png")
+        // }, function(){
+        //     $(this).attr("src", "en.png")
+        // });
+        //hover는 이벤트, logo에 롤오버kr.png,  롤아웃en.png
+        $(document).ready(function(){
+          $(".tab li a").click(function(e){
+            e.preventDefault();
+            $(this).parent().addClass("active").siblings().removeClass("active");
+          })
+        });
+        
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .container{
+            max-width: 1280px;
+            margin: 0 auto;
+            background-color: antiquewhite;
+        }
+        .main-text{
+            text-align: center;
+        }
+        .tab{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 20px;
+        }
+        .tab li{
+            background-color: paleturquoise;
+            padding: 10px 30px;
+            border-radius: 40px;
+        }
+        .tab li a{
+            text-decoration: none;
+            color: black;
+        }
+        .tab li:hover, .tab li:active{
+            background-color: rgb(34, 68, 182);  
+        }
+        .tab li:hover a, .tab li:active a{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="section portfolio">
+        <div class="container">
+            <div>
+                <div class="main-text">
+                    <h1>Portfolio</h1>
+                    <p>Welcome to my portfolio page!</p>
+                </div>
+                <ul class="tab">
+                    <li class="active"><a href="#web">팀작업</a></li>
+                    <li><a href="#design">설계</a></li>
+                    <li><a href="#brand">BI</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
