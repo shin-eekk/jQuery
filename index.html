@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $("body").css({
+                "background":"#444",
+                "color":"white",
+                "font-size":"1.5rem",
+            });
+            $("body").html('<button>Click Me</button>')
+            .css({
+                "display":"flex",
+                "justify-content":"center",
+                "align-items":"center",
+                "height":"100vh"
+            });
+            $("button").css({
+                "background-color": "green",
+                "color": "white",
+                "border": "none",
+                "padding": "10px 20px",
+                "cursor": "pointer",              
+            });
+            
+                    //  .css("color","white")
+                    //  .html("<h2>태그넣기</h2>");
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
